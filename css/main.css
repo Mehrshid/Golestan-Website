@@ -1,0 +1,137 @@
+body{
+	/*text-align: center;*/
+}
+section {
+	margin-left: auto;
+	margin-right:auto;
+	width: 95%;
+	font: message-box;
+	overflow: hidden;
+}
+
+#logo-div{
+	float:left;
+}
+
+#title-div{
+	text-align: center;
+	width: 70%;
+	margin: 0px auto 0px auto;
+	padding-top: 35px;
+	padding-left: 20px;
+	color: #000;
+	font-family: monospace;
+
+
+}
+
+
+#login-div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:300px;
+	height:300px;
+
+}
+
+.login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+#login-title {
+
+	text-align: center;
+	font-family: monospace;
+}
+
+
+input[type=text], input[type=password] {
+	width: 95%; 
+	margin-bottom: 10px;
+	text-align: right; 
+	background: rgba(0,0,0,0);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: gray;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+
+}
+
+
+/* Set a style for all buttons */
+button {
+
+    background-color: #CCCCCC;
+    float: right;
+    color: white;
+    font-size: 13px;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+
+}
+
+#remember-div {
+	margin-top: 30px !important;
+	float: right;
+	margin-right: 25px;
+
+
+}
+
+input[type = checkbox] {
+
+	margin-left: 20px;
+	font-size: 10px;
+	font-color: red;
+
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Add padding to containers */
+.login-div {
+    padding: 10px;
+}
+
+#forgotpass-div {
+	margin-left: 100px;
+	float: right;
+	text-align: right;
+
+}
+/* The "Forgot password" text */
+span.psw {
+
+    margin-top: 30px;
+    
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
+
+
+
