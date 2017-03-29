@@ -1,6 +1,13 @@
 body{
 	/*text-align: center;*/
+	  font-family: BNazanin;
 }
+
+@font-face {
+    font-family: BNazanin;
+    src: url(../fonts/sansation_light.woff);
+}
+
 section {
 	margin-left: auto;
 	margin-right:auto;
@@ -19,10 +26,9 @@ section {
 	margin: 0px auto 0px auto;
 	padding-top: 35px;
 	padding-left: 20px;
-	color: #000;
-	font-family: monospace;
-
-
+	color: #1F607C;
+	font-family: BNazanin;
+	font-size: 30px;
 }
 
 
@@ -39,9 +45,9 @@ section {
 .login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
 
 #login-title {
-
 	text-align: center;
-	font-family: monospace;
+	font-family: BNazanin;
+	color:#1E3C59;
 }
 
 
@@ -58,13 +64,11 @@ input[type=text], input[type=password] {
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius: 4px;
 	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
-
 }
 
 
 /* Set a style for all buttons */
 button {
-
     background-color: #CCCCCC;
     float: right;
     color: white;
@@ -75,15 +79,12 @@ button {
     cursor: pointer;
     width: 50%;
     box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
-
 }
 
 #remember-div {
 	margin-top: 30px !important;
 	float: right;
 	margin-right: 25px;
-
-
 }
 
 input[type = checkbox] {
@@ -120,9 +121,7 @@ button:hover {
 }
 /* The "Forgot password" text */
 span.psw {
-
     margin-top: 30px;
-    
 }
 
 /* Change styles for span and cancel button on extra small screens */
