@@ -5,12 +5,36 @@
 		<title> سیستم جامع گلستان </title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 
+	<!-- clock on the top of the page -->
+		<script>
+		function startTime() {
+		    var today = new Date();
+		    var h = today.getHours();
+		    var m = today.getMinutes();
+		    var s = today.getSeconds();
+		    m = checkTime(m);
+		    s = checkTime(s);
+		    document.getElementById('clk').innerHTML =
+		    h + ":" + m + ":" + s;
+		    var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
+		</script>
+
 	</head>
+
+		<body onload="startTime()">
+			<div id="clk">		
+			</div>
+		</body>
 
 	<body class = "body-format">
 		
 		<section id = "header">
-			<div id="logo-div"><img id="logo" src="Images/logo.png" alt="Logo" style="width:150px;height:145px;"></div>
+			<div id="logo-div"><img id="logo" src="Images/logo.png" alt="Logo" style="width:140px;height:135px;"></div>
 			<!-- <div id "gollogo-div"> <img id = "gollogo" src = "Images/golestan-logo.png" alt = "GolLogo" style="width:250px;height:145px;"></div> -->
 			<div id="title-div"> <h2> <b> سیستم جامع گلستان </b> </h2>
 		</section>

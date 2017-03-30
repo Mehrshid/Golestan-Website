@@ -16,12 +16,27 @@ section {
 	overflow: hidden;
 }
 
+
+#clk {
+
+	float: left;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-left:10px;
+	border: medium;
+
+
+
+}
+
 #logo-div{
-	float:left;
+	float:right;
+	margin-right: 10px;
+	margin-top: 5px;
 }
 
 #title-div{
-	text-align: center;
+	text-align: center !important;
 	width: 70%;
 	margin: 0px auto 0px auto;
 	padding-top: 35px;
