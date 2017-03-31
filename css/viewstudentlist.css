@@ -90,6 +90,12 @@ form {
 	margin-top: 35px;
 }
 
+#name-div{
+	font-size: 20px;
+	font-family: BNazanin;
+
+}
+
 input[type=text], input[type=password] { 
 	text-align: right; 
 	margin-top: 25px;

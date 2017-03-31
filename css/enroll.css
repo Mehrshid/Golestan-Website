@@ -55,6 +55,17 @@ section {
 	font-family: BNazanin;
 }
 
+#title-page {
+
+	text-align: right;
+	font-family: BNazanin;
+	margin-right: 15px;
+	padding-right: 20px;
+	color: #1F607C;
+
+
+}
+
 #info {
 	float: right;
 	text-align: right;
@@ -66,42 +77,9 @@ section {
 	width: 11%;
 }
 
-.features-btn{ 
-	background-color: #076185;
-	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	margin-bottom: 20px; 
-	text-align: center !important;
-	vertical-align: center;
-	padding: 20px 20px 20px 20px;
-	width: 35%;
-	font-family: BNazanin;
-}
-
-/*#features .col-sm-4:nth-child(2) .features-btn{
-	margin: 10px;
-}
-
-#features div.col-sm-4{
-	padding: 0;
-}*/
-
-#features {
-	text-align: left;
-	font-size: 23px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.features-btn a {
-	text-decoration: none !important;
-	color: white !important;
-}
 
 #footer{
-	margin-top: 5%;
+	margin-top: 35%;
 	margin-bottom: 20px;
 	border-top: solid 2px darkgray;
 	overflow: hidden;
@@ -109,4 +87,48 @@ section {
 	font-family: BNazanin;
 	border-bottom: solid 2px darkgray;
 }
+
+#table-sec {
+
+	margin-top: 40px;
+	margin-left: 160px;
+	font-family: BNazanin;
+
+}
+
+#table-div {
+	overflow-x:auto;	
+}
+
+#courses-table {
+
+	text-align: center;
+	font-family: BNazanin;
+
+}
+
+#add-course {
+	font-family: BNazanin;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: 10px;
+	color: #004A80;
+
+}
+
+#btn-modal-left {
+	background-color: gray;
+	float: left;
+	color: white;
+
+}
+
+#btn-modal-right {
+	background-color: #004A80;
+	color: white;
+	float: right;
+
+}
+
+
 

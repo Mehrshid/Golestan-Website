@@ -14,14 +14,6 @@ section {
 	overflow: hidden;
 }
 
-form {
-    display: inline-block;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    width:100%;
-}
-
 #clk {
 	float: left;
 	font-size: 18px;
@@ -74,69 +66,66 @@ form {
 	width: 11%;
 }
 
-#form-div {
+#features {
+	text-align: left;
+	font-size: 23px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.container{ 
+	background-color: #076185;
+	height: 170px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px; 
+	text-align: center !important;
+	vertical-align: center;
+	padding: 20px 20px 20px 20px;
+	width: 35% !important;
 	font-family: BNazanin;
-	font-size: 20px;
 }
 
-.form-div h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
-
-#form-title {
-	text-align: center;
-	font-family: BNazanin;
-	color:#1E3C59;
-	margin-top: 35px;
-}
-
-input[type=text], input[type=password] { 
-	text-align: right; 
-	margin-top: 25px;
-	width: 25%;
-	background: rgba(0,0,0,0);
-	border: none;
-	outline: none;
-	padding: 10px;
-	font-size: 15px;
-	color: gray;
-	border: 1px solid rgba(0,0,0,0.3);
-	border-radius: 4px;
-}
-
-button {
-    background-color: #17649B;
-    margin-top: 30px !important;
-    margin-bottom: 40px !important;
+#add-btn {
+    background-color: transparent !important;
+    /*margin-top: 30px !important;*/
+    /*margin-bottom: 40px !important;*/
     color: white !important;
-    font-size: 13px;
-    padding: 14px 20px;
+    font-size: 35px !important;
+    /*padding: 14px 20px;*/
     /*margin: 20px 0;*/
-    border: none;
+    border: transparent !important;
     border-radius: 4px;
     cursor: pointer;
     width: 15%;
-    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
-}
+    box-shadow: none !important;
 
-button:hover {
+/*button:hover {
     opacity: 0.9;
 }
+*/
+/*.modal-title {
+	font-size: 20px !important;
+	color: blue !important;
+	font-family: BNazanin !important;
+}*/
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
+/*.container >h2 {
+	color: white !important;
 }
-
+*/
 #footer{
-	/*margin-top: 35%;*/
+	margin-top: 35%;
 	margin-bottom: 20px;
 	border-top: solid 2px darkgray;
 	overflow: hidden;
 	text-align: right;
 	font-family: BNazanin;
 	border-bottom: solid 2px darkgray;
+}
+
+#glyph{
+	color: white !important;
 }
