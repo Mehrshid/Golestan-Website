@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>گلستان استاد</title>
-	<link rel="stylesheet" type="text/css" href="../css/role.css">
-	<!-- <script type="text/javascript" src="../js/actions.js"></script> -->
+
+	<title>گلستان - ویرایش اطلاعات شخصی</title>
+	<link rel="stylesheet" type="text/css" href="../css/info.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
@@ -45,22 +44,24 @@
 		</div>
 		<div id = "info">
 			<p>خوش آمدید</p>
-			<p>استاد: دکتر علی اکبری</p>
+			<p>دانشجو: یاسمن</p>
 			<a href="../login.html">خروج</a>
 		</div>
 	</section>
 
-	<section id="features">
-		<div class="features-btn"><a href="">مشاهده‌ی لیست دانشجویان<br><span class="glyphicon glyphicon-education"></span></a></div></div>
-		<div class="features-btn"><a href="">وارد کردن نمره<br><span class="glyphicon glyphicon-edit"></span></a></div></div>
-		<div class="features-btn"><a href="../pages/Editinfo.html">ویرایش اطلاعات شخصی<br><span class="glyphicon glyphicon-user"></span></a></div></div>
-		<!-- <div class="container-fluid">
-			<div class="row">
-				<div class=" col-xs-12 col-sm-4"><div class="features-btn"><a href="">ویرایش اطلاعات شخصی<br><span class="glyphicon glyphicon-user"></span></a></div></div>
-				<div class=" col-xs-12 col-sm-4"><div class="features-btn"><a href="">مشاهده کارنامه<br><span class="glyphicon glyphicon-file"></span></a></div></div>
-				<div class=" col-xs-12 col-sm-4"><div class="features-btn"><a href="">اخذ درس<br><span class="glyphicon glyphicon-education"></span></a></div></div>
+	<section id = "change-info">
+		<form action="action.php">
+			<div id = "form-div">
+				<h1 id = "form-title">ویرایش اطلاعات شخصی</h1>
+				<section id = "form-elements">
+					<div id = "name-div"><input type = "text" placeholder = "نام" name = "name"><!--  :نام --></div>
+					<div id = "sname-div"><input type = "text" placeholder = "نام خانوادگی" name = "sname"><!--  :نام خانوادگی --></div>
+					<div id="psw-div"><input type = "password" placeholder = "رمز عبور" name = "psw"><!--  : رمز عبور --></div>
+					<div id="confirm-psw-div"><input type = "password" placeholder = "تکرار رمز عبور" name = "psw"><!--  : تکرار رمز عبور --></div>
+				</section>	
+				<button type = "submit">اعمال تغییرات</button>
 			</div>
-		</div>		 -->
+		</form>
 	</section>
 
 	<section id="footer">

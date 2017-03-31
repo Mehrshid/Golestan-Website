@@ -1,6 +1,6 @@
 body{
 	/*text-align: center;*/
-	  font-family: BNazanin;
+	font-family: BNazanin;
 }
 
 @font-face {
@@ -18,15 +18,11 @@ section {
 
 
 #clk {
-
 	float: left;
-	font-size: 15px;
+	font-size: 18px;
 	margin-top: 10px;
 	margin-left:10px;
 	border: medium;
-
-
-
 }
 
 #logo-div{
