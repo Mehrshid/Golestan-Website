@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>گلستان - اخذ درس</title>
+	<link rel="stylesheet" type="text/css" href="../css/report.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+	<script>
+		function startTime() {
+		    var today = new Date();
+		    var h = today.getHours();
+		    var m = today.getMinutes();
+		    var s = today.getSeconds();
+		    m = checkTime(m);
+		    s = checkTime(s);
+		    document.getElementById('clk').innerHTML =
+		    h + ":" + m + ":" + s;
+		    var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
+	</script>
+
+</head>
+
+<body class = "body-fa">
+	<section id = "header">		
+		<div id = "logo-div">
+			<img id = "logo" src = "../Images/logo.png" alt = "Logo" style = "width:118px;height:120px;"> 
+		</div>
+		<div id = "title">
+			<h1 id = "golname">سیستم جامع دانشگاهی گلستان</h1>
+			<h1 id = "golname">دانشگاه شهید بهشتی</h1>
+		</div>
+		<div id = "info">
+			<p>خوش آمدید</p>
+			<p>دانشجو: مهرشید</p>
+			<a href="../login.html">خروج</a>
+		</div>
+	</section>
+
+	<section id = "title-page">
+
+		<h3><b>:کارنامه‌های دانشجو</b></h3>
+		
+	</section>
+
+
+	<section id = "generalreport-sec">
+		<table id = "table-genreport">
+			<tr>
+			    <td>۱۶.۵۰</td>
+			    <th>معدل کل</th>
+
+			 </tr>
+			 <tr>
+			    <td>۱۰۱</td>
+			    <th>تعداد واحد گذرانده</th>
+			 </tr>
+			 <tr>
+			    <td>۱۴.۶۰</td>
+			    <th>معدل دانشکده</th>
+			 </tr>
+		</table>
+	</section>
+
+
+	<div class="container">
+
+	 <div class="dropdown">
+	    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> انتخاب ترم
+	    <span class="caret"></span></button>
+	    <ul id = "text-dropdown" class="dropdown-menu">
+	      <li><a href="#">ترم ۱</a></li>
+	      <li><a href="#">ترم ۲</a></li>
+	      <li><a href="#">ترم ۳</a></li>
+	    </ul>
+	  </div>
+	</div>
+
+	<div id = "report-div">
+
+		<h4> :ریز نمرات دانشجو در ترم </h4>
+		<table id = "table-report">
+		  <tr>
+		  	<th>تعداد واحد درس</th>
+		  	<th>وضعیت قبولی</th>
+		    <th>نمره اخذ شده</th>
+		    <th>نام درس</th>
+		    <th>کد درس</th>
+		  </tr>
+		  <tr>
+		  	<td>۲</td>
+		  	<td>قبول</td>
+		    <td>۱۷.۷۵</td>
+		    <td>کارآموزی</td>
+		    <td>۴۳.۱۱.۱۱۰.۱</td>
+		  </tr>
+		  <tr>
+		  	<td>۳</td>
+		  	<td>قبول</td>
+		    <td>۱۵.۲۵</td>
+		    <td>مهندسی اینترنت</td>
+		    <td>۴۳.۱۱.۱۳۱.۱</td>
+		  </tr>
+
+		</table>
+	</div>
+
+	<div id = "termrep-div">
+			<h4> :معدل دانشجو در این ترم </h4> <br/>
+
+				<table id = "table-termreport">
+			<tr>
+			    <td>۱۷.۵۴</td>
+			    <th>معدل دانشجو در این ترم</th>
+
+			 </tr>
+			 <tr>
+			    <td>۱۹</td>
+			    <th>تعداد واحد گذرانده این ترم</th>
+			 </tr>
+			 <tr>
+			    <td>۱۴.۶۰</td>
+			    <th>معدل دانشکده در این ترم</th>
+			 </tr>
+		</table>
+
+	</div>
+
+
+
+
+	<section id="footer">
+		<p>.سیستم جامع دانشگاهی گلستان | نسخه ۱.۰ | تمامی حقوق برای توسعه‌دهندگان محفوظ است</p>
+	</section>
+
+
+</body>
+</html>
