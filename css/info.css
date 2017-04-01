@@ -140,3 +140,94 @@ button:hover {
 	font-family: BNazanin;
 	border-bottom: solid 2px darkgray;
 }
+
+/*submit grade*/
+#table-sec {
+	margin-top: 10px;
+	margin-left: 160px;
+	font-family: BNazanin;
+}
+
+#table-div {
+	overflow-x:auto;	
+}
+
+#courses-table {
+	text-align: center;
+	font-family: BNazanin;
+}
+
+#add-course {
+	font-family: BNazanin;
+	text-align: center;
+	margin-top: 50px;
+	margin-left: 10px;
+	color: #004A80;
+}
+
+#btn-modal-left {
+	background-color: gray;
+	float: left;
+	color: white;
+}
+
+#btn-modal-right {
+	background-color: #004A80;
+	color: white;
+	float: right;
+}
+
+#par {
+	text-align: right;
+	font-family: BNazanin;
+	margin-right: 15px;
+	padding-right: 20px;
+	color: #1F607C;
+}
+
+#par2 {
+	text-align: right;
+	font-family: BNazanin;
+	margin-right: 15px;
+	padding-right: 20px;
+}
+
+#main {
+	background-color: #17649B;
+}
+
+#choose {
+	text-align: center;
+}
+
+#form-div {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: BNazanin;
+	font-size: 20px;
+}
+
+#form-title {
+	text-align: center;
+	font-family: BNazanin;
+	color:#1E3C59;
+	margin-top: 35px;
+}
+
+input[type=text]{ 
+	text-align: right; 
+	margin-top: 25px;
+	width: 25%;
+	background: rgba(0,0,0,0);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 15px;
+	color: gray;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+}
+
+.modal-title {
+	font-size: 20px;
+}
