@@ -22,7 +22,7 @@
 		    var t = setTimeout(startTime, 500);
 		}
 		function checkTime(i) {
-		    if (i < 10) {i="0" + i};  // add zero in front of numbers < 10
+		    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
 		    return i;
 		}
 	</script>
@@ -33,31 +33,31 @@
 		<div id="clk"></div>
 </body> -->
 
-<body class="body-fa">
+<body class = "body-fa">
 
-	<section id="header">		
-		<div id="logo-div">
-			<img id="logo" src="../Images/logo.png" alt="Logo" style="width:118px;height:120px;"> 
+	<section id = "header">		
+		<div id = "logo-div">
+			<img id = "logo" src = "../Images/logo.png" alt = "Logo" style = "width:118px;height:120px;"> 
 		</div>
-		<div id="title">
-			<h1 id="golname">سیستم جامع دانشگاهی گلستان</h1>
-			<h1 id="golname">دانشگاه شهید بهشتی</h1>
+		<div id = "title">
+			<h1 id = "golname">سیستم جامع دانشگاهی گلستان</h1>
+			<h1 id = "golname">دانشگاه شهید بهشتی</h1>
 		</div>
-		<div id="info">
+		<div id = "info">
 			<p>خوش آمدید</p>
 			<p>دانشجو: مهرشید</p>
 			<a href="../login.html">خروج</a>
 		</div>
 	</section>
 
-	<section id="title-page">
-		<h2 id="page-title"><b>سیستم ثبت نام و اخذ درس</b><h2>
+	<section id = "title-page">
+		<h2 id = "page-title"><b>سیستم ثبت نام و اخذ درس</b><h2>
 		<h3><b>:دروس اخذ شده توسط دانشجو</b></h3>
 	</section>
 	
 
-	<section id="table-sec">
-		<div id="table-div" >
+	<section id = "table-sec">
+		<div id = "table-div" >
 		<style>
 		table, th, td {
 		    border: 1px solid black;
@@ -74,7 +74,7 @@
 
 		</style>
 
-	<table id="courses-table" style="width:75%">
+	<table id = "courses-table" style="width:75%">
 	  <tr>
 	    <th>شرایط اخذ</th>
 	    <th>نام درس</th> 
@@ -126,9 +126,9 @@
 	<h3 id ="par"><b>:اخذ دروس ارائه شده</b></h3>
 	<h4 id="par2"> :برای انتخاب درس بر روی دکمه زیر کلیک کنید</h4>
 
-	<div id="add-course">
+	<div id = "add-course">
 		
-  		<button id ="main" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> مشاهده دروس <br/><span class="glyphicon glyphicon-plus-sign"></span> </button>
+  		<button id ="main" type = "button" class = "btn btn-info btn-lg" data-toggle = "modal" data-target = "#myModal"> مشاهده دروس <br/><span class = "glyphicon glyphicon-plus-sign"></span> </button>
 
   		  <!-- Modal -->
 		  <div class="modal fade" id="myModal" role="dialog">
@@ -140,23 +140,23 @@
 		        </div>
 		        <div class="modal-body">
 
-		        <section id="choose">
+		        <section id = "choose">
 					<form action="action.php">
-						<div id="form-div">
-<!-- 						<h1 id="form-title">ویرایش اطلاعات شخصی</h1>
- -->						<section id="form-elements">
-								<div id="code-div"><input type="text" id="id-field" placeholder="کد درس" name="id"><!--  :نام --></div><br>
-								<div id="name-div">
-                        		<select name="name" id="name-field">
-                            		<option value="">انتخاب کنید</option>
+						<div id = "form-div">
+<!-- 						<h1 id = "form-title">ویرایش اطلاعات شخصی</h1>
+ -->						<section id = "form-elements">
+								<div id = "code-div"><input type = "text" placeholder = "کد درس" name = "name"><!--  :نام --></div><br>
+								<div id = "name-div">
+                        		<select name="group-type">
+                            		<option value="select">انتخاب کنید</option>
                             		<option value="software">مهندسی اینترنت</option>
                             		<option value="hardware">مهندسی نرم‌افزار ۱</option>
                             		<option value="hardware">مهندسی نرم‌افزار ۲</option>
                         		</select> : نام درس
                     			</div><br>
-                    			<div id="term-div">
-                        		<select name="term" id="term-field">
-                            		<option value="">انتخاب کنید</option>
+                    			<div id = "term-div">
+                        		<select name="group-type">
+                            		<option value="select">انتخاب کنید</option>
                            			<option value="software">۳۹۵۱</option>
                             		<option value="hardware">۳۹۵۲</option>
                             		<option value="hardware">۳۹۶۱</option>
@@ -170,8 +170,8 @@
 
 		        </div>
 		        <div class="modal-footer">
-		          <button id="btn-modal-left" type="button" class="btn btn-default" data-dismiss="modal">بستن پنجره</button>
-		          <button id="btn-modal-right" type="button" class="btn btn-default" onclick="addRow();" data-dismiss="modal">اضافه کردن درس</button>
+		          <button id = "btn-modal-left" type="button" class="btn btn-default" data-dismiss="modal">بستن پنجره</button>
+		          <button id = "btn-modal-right" type="button" class="btn btn-default" data-dismiss="modal">اضافه کردن درس</button>
 		        </div>
 		      </div>
 		    </div>
@@ -182,24 +182,10 @@
 	-->
 	</div>
 
+
 	<section id="footer">
 		<p>.سیستم جامع دانشگاهی گلستان | نسخه ۱.۰ | تمامی حقوق برای توسعه‌دهندگان محفوظ است</p>
 	</section>
-
-	<script type="text/javascript">
-	function addRow() {
-		var tableRef = document.getElementById('courses-table')
-		var newRow = tableRef.insertRow(tableRef.rows.length);
-		var cell1 = newRow.insertCell(0);
-		var cell2 = newRow.insertCell(0);
-		var cell3 = newRow.insertCell(0);
-		var cell4 = newRow.insertCell(0);
-		cell1.innerHTML = tableRef.rows.length - 1;
-		cell2.innerHTML = document.getElementById('id-field').value
-		cell3.innerHTML = document.getElementById('name-field').value
-		cell4.innerHTML = document.getElementById('term-field').value
-	}
-	</script>
 
 </body>
 </html>

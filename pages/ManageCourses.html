@@ -8,9 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="../css/managecourses.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/managecourse.js"></script>
+    <script type="text/javascript" src="../js/managecoursetable.js"</script>
 
 	<script>
 		function startTime() {
@@ -50,138 +52,150 @@
 
     <section id="features">
 
-        <div class="container">
-            <h2>تعریف درس جدید</h2>
-            <!-- Trigger the modal with a button -->
-            <button id ="add-btn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus-sign"></span></button>
+        <div id="add-course">
 
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-    
-                <!-- Modal content-->
-                <div class="modal-content">
+        <button id ="create-btn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> افزودن درس <br/><span class="glyphicon glyphicon-plus-sign"></span> </button>
 
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">تعریف درس جدید</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <form action="action.php">
-                            <div id = "form-div">
-                                <section id = "form-elements">
-                                <div id = "name-div"><input type = "text" placeholder = "نام درس" name = "name"> :نام درس</div>
-                                <div id = "code-div"><input type = "text" placeholder = "کد درس" name = "name"> :کد درس</div>
-                                <div id = "code-div"><input type = "text" placeholder = "استاد ارائه کننده" name = "name"> :استاد ارائه کننده</div>
-                                <div id = "unit-div"><input type = "text" placeholder = "تعداد واحد درس" name = "sname"> :تعداد واحد درس</div>
-                                <div id = "type-div">
-                                    <select name="course-type">
-                                        <option value="select">انتخاب کنید</option>
-                                        <option value="optional">اختیاری</option>
-                                        <option value="mandatory">اجباری</option>
-                                    </select> : نوع درس
-                                </div>
-                                <div id = "group-div">
-                                    <select name="group-type">
-                                        <option value="select">انتخاب کنید</option>
-                                        <option value="software">نرم افزار</option>
-                                        <option value="hardware">سخت افزار</option>
-                                    </select> : گروه درس
-                                </div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="button-group">
-                                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"> انتخاب</span> <span class="caret"></span></button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;مهندسی اینترنت</a></li>
-                                                    <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;شبکه‌های کامپیوتری</a></li>
-                                                    <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;معماری کامپیوتر</a></li>
-                                                    <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;ریاضی ۲</a></li>
-                                                    <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;مهندسی نرم‌افزار ۲</a></li>
-                                                    <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;پایگاه داده‌ها</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </section>  
-                                <button type = "submit">اعمال تغییرات</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+        <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title" style="font-size: 20px"><b>انتخاب درس</b></h4>
                 </div>
-      
+                <div class="modal-body">
+
+                <section id="choose">
+                    <form action="action.php">
+                        <div id="form-div">
+                            <section id="form-elements">
+                                <div id="name-div"><input type="text" id="name-field" placeholder="نام درس" name="id"> :نام درس</div>
+                                <div id="code-div"><input type="text" id="name-field" placeholder="کد درس" name="id"> :کد درس</div><br>
+                                <div id="prof-div">
+                                <select name="name" id="name-field">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="software">دکتر علی‌اکبری - ۹۰۳۱۸۳۹۸</option>
+                                    <option value="hardware">دکتر شاملی - ۹۲۲۱۳۰۸۷</option>
+                                    <option value="hardware">دکتر عباسپور - ۸۰۳۵۸۱۰۲</option>
+                                </select> : استاد
+                                </div><br>
+                                <div id="credit-div">
+                                <select name="credit" id="credit-field">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="1">۱</option>
+                                    <option value="2">۲</option>
+                                    <option value="3">۳</option>
+                                    <option value="4">۴</option>
+                                </select> : تعداد واحد
+                                </div><br>
+                                <div id="type-div">
+                                <select name="type" id="type-field">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="compulsary">اجباری</option>
+                                    <option value="optional">اختیاری</option>
+                                </select> : نوع درس
+                                </div><br>
+                                <div id="group-div">
+                                <select name="group" id="group-field">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="software">نرم‌افزار</option>
+                                    <option value="hardware">سخت‌افزار</option>
+                                </select> : گروه درس
+                                </div><br>
+                                <div id="date-div">
+                                <select name="date" id="date-field">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="sat-1">شنبه ۸:۰۰-۱۰:۰۰</option>
+                                    <option value="sat-2">شنبه ۱۰:۰۰-۱۲:۰۰</option>
+                                    <option value="sat-3">شنبه ۱۴:۰۰-۱۶:۰۰</option>
+                                    <option value="sun-1">یکشنبه ۸:۰۰-۱۰:۰۰</option>
+                                    <option value="sun-2">یکشنبه ۱۰:۰۰-۱۲:۰۰</option>
+                                    <option value="sun-3">یکشنبه ۱۴:۰۰-۱۶:۰۰</option>
+                                </select> : روز و ساعت ارائه‌ی درس
+                                </div><br>
+                                <div id="exam-div">
+                                <select name="exam" id="exam-field">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="sat-1">شنبه ۸:۰۰-۱۰:۰۰</option>
+                                    <option value="sat-2">شنبه ۱۰:۰۰-۱۲:۰۰</option>
+                                    <option value="sat-3">شنبه ۱۴:۰۰-۱۶:۰۰</option>
+                                    <option value="sun-1">یکشنبه ۸:۰۰-۱۰:۰۰</option>
+                                    <option value="sun-2">یکشنبه ۱۰:۰۰-۱۲:۰۰</option>
+                                    <option value="sun-3">یکشنبه ۱۴:۰۰-۱۶:۰۰</option>
+                                </select> : ساعت و تاریخ امتحان
+                                </div><br>
+                                <div id="desc-div"><input type="text" id="desc-field" placeholder="توضیحات" name="id"> :توضیحات</div><br>                            
+                        </div>
+                    </form>
+                </section>
+
                 </div>
+                <div class="modal-footer">
+                  <button id="btn-modal-left" type="button" class="btn btn-default" data-dismiss="modal">بستن پنجره</button>
+                  <button id="btn-modal-right" type="button" class="btn btn-default" onclick="addRow();" data-dismiss="modal">اضافه کردن درس</button>
+                </div>
+              </div>
             </div>
-  
+          </div>
         </div>
 
+        <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>توضیحات</th>
+                <th>ساعت و تاریخ امتحان</th>
+                <th>روز و ساعت ارائه‌ی درس</th>
+                <th>گروه درس</th>
+                <th>نوع درس</th>
+                <th>تعداد واحد درس</th>
+                <th>استاد درس</th>
+                <th>کد درس</th>
+                <th>نام درس</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ندارد</td>
+                <td>۱۳۹۶/۳/۲<br>۱۰:۳۰</td>
+                <td>شنبه - دوشنبه<br>۹:۰۰ - ۱۰:۳۰</td>
+                <td>نرم‌افزار</td>
+                <td>اجباری</td>
+                <td>۳</td>
+                <td>دکتر علی‌اکبری</td>
+                <td>۴۳-۱۱-۲۸۷۵</td>
+                <td>مهندسی اینترنت</td>
+            </tr>
+        
+        </tbody>
+        <tbody>
+            <tr>
+                <td>ندارد</td>
+                <td>۱۳۹۶/۳/۱۹<br>۱۰:۳۰</td>
+                <td>یکشنبه - سه‌شنبه<br>۱۰:۳۰ - ۱۲:۰۰</td>
+                <td>نرم‌افزار</td>
+                <td>اجباری</td>
+                <td>۳</td>
+                <td>دکتر شاملی</td>
+                <td>۴۳-۱۱۴۷۹۸</td>
+                <td>مهندسی نرم‌افزار</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>ندارد</td>
+                <td>۱۳۹۶/۳/۲<br>۱۴:۰۰</td>
+                <td>یکشنبه - سه‌شنبه<br>۱۴:۰۰ - ۱۵:۳۰</td>
+                <td>سخت‌افزار</td>
+                <td>اجباری</td>
+                <td>۳</td>
+                <td>دکتر رجائی</td>
+                <td>۴۳-۱۲-۸۷۲۳</td>
+                <td>مدار‌های الکتریکی</td>
+            </tr>
+        </tbody>
+    </table>
 
-        <div class="container">
-            <div>ویرایش درس</div>
-            <div id="glyph"><span class="glyphicon glyphicon-pencil"></span></div>
-            <div id="note">.لطفاً درس مورد نظر خود را انتخاب کنید</div>
-            <div id = "course-selection">
-                <select name="course-type">
-                    <option value="select">انتخاب کنید</option>
-                    <option value="optional">مهندسی اینترنت</option>
-                    <option value="mandatory">مهندسی نرم‌افزار ۲</option>
-                </select> : نام درس
-            </div>
-            <div id="edit-modal">
-                <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#editModal">ویرایش</button>
-
-                <!-- Modal -->
-                <div id="editModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">ویرایش درس</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="action.php">
-                            <div id = "form-div">
-                                <section id = "form-elements">
-                                <div id = "name-div"><input type = "text" placeholder = "نام درس" name = "name"> :نام درس</div>
-                                <div id = "code-div"><input type = "text" placeholder = "کد درس" name = "name"> :کد درس</div>
-                                <div id = "unit-div"><input type = "text" placeholder = "تعداد واحد درس" name = "sname"> :تعداد واحد درس</div>
-                                <div id = "type-div">
-                                    <select name="course-type">
-                                        <option value="select">انتخاب کنید</option>
-                                        <option value="optional">اختیاری</option>
-                                        <option value="mandatory">اجباری</option>
-                                    </select> : نوع درس
-                                </div>
-                                <div id = "group-div">
-                                    <select name="group-type">
-                                        <option value="select">انتخاب کنید</option>
-                                        <option value="software">نرم افزار</option>
-                                        <option value="hardware">سخت افزار</option>
-                                    </select> : گروه درس
-                                </div>
-                                </section>  
-                                <button type = "submit">اعمال تغییرات</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                    </div>
-                </div>
-
-                </div>
-                </div>
-            </div>
     </section>
 
 	<section id="footer">
