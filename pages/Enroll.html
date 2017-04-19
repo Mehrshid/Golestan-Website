@@ -102,22 +102,6 @@
 	   	<td>۳</td>
 
 	  </tr>
-
-	  <tr>
-	  	<td> </td>
-	  	<td> </td>
-	  	<td> </td>
-	  	<td> ۴ </td>
-
-	  </tr>
-
-	  	<tr>
-	  	<td> </td>
-	  	<td> </td>
-	  	<td> </td>
-	  	<td> ۵ </td>
-
-	  </tr>
 	</table>
 
 </div>
@@ -136,33 +120,24 @@
 		      <div class="modal-content">
 		        <div class="modal-header">
 		          <button type="button" class="close" data-dismiss="modal">&times;</button>
-		          <h4 class="modal-title" style="font-size: 20px"><b>انتخاب درس</b></h4>
+		          <h4 class="modal-title" style="font-size: 25px; color: black"><b>اخذ درس</b></h4>
 		        </div>
 		        <div class="modal-body">
 
 		        <section id="choose">
 					<form action="action.php">
 						<div id="form-div">
-<!-- 						<h1 id="form-title">ویرایش اطلاعات شخصی</h1>
- -->						<section id="form-elements">
-								<div id="code-div"><input type="text" id="id-field" placeholder="کد درس" name="id"><!--  :نام --></div><br>
+ 							<section id="form-elements">
+								<div id="code-div"><input type="text" id="id-field" placeholder="کد درس" name="id"> :کد درس</div><br>
 								<div id="name-div">
                         		<select name="name" id="name-field">
                             		<option value="">انتخاب کنید</option>
                             		<option value="software">مهندسی اینترنت</option>
-                            		<option value="hardware">مهندسی نرم‌افزار ۱</option>
-                            		<option value="hardware">مهندسی نرم‌افزار ۲</option>
+                            		<option value="مهندسی نرم‌افزار ۱">مهندسی نرم‌افزار ۱</option>
+                            		<option value="مهندسی نرم‌افزار ۲">مهندسی نرم‌افزار ۲</option>
                         		</select> : نام درس
                     			</div><br>
-                    			<div id="term-div">
-                        		<select name="term" id="term-field">
-                            		<option value="">انتخاب کنید</option>
-                           			<option value="software">۳۹۵۱</option>
-                            		<option value="hardware">۳۹۵۲</option>
-                            		<option value="hardware">۳۹۶۱</option>
-                        		</select> : سال و ترم درس
-                    			</div><br>
-                    			<p>.لطفاً از بین کد درس یا نام درس + سال و ترم، یکی را انتخاب نمایید 
+                    			<p>لطفاً از بین کد درس یا نام درس، یکی را انتخاب نمایید</p>
 							</section>	
 						</div>
 					</form>
@@ -170,16 +145,12 @@
 
 		        </div>
 		        <div class="modal-footer">
-		          <button id="btn-modal-left" type="button" class="btn btn-default" data-dismiss="modal">بستن پنجره</button>
 		          <button id="btn-modal-right" type="button" class="btn btn-default" onclick="addRow();" data-dismiss="modal">اضافه کردن درس</button>
+		          <button id="btn-modal-center" type="button" class="btn btn-default" onclick="deleteRow();" data-dismiss="modal">حذف درس</button>
 		        </div>
 		      </div>
 		    </div>
 		  </div>
-		 <!--<a href="#" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-plus-sign"></span> Plus
-        </a>
-	-->
 	</div>
 
 	<section id="footer">
@@ -194,12 +165,24 @@
 		var cell2 = newRow.insertCell(0);
 		var cell3 = newRow.insertCell(0);
 		var cell4 = newRow.insertCell(0);
-		cell1.innerHTML = tableRef.rows.length - 1;
+		// Number of Row
+		cell1.innerHTML = tableRef.rows.length - 1;	
+		// Code e dars					
 		cell2.innerHTML = document.getElementById('id-field').value
+		// name e dars
 		cell3.innerHTML = document.getElementById('name-field').value
-		cell4.innerHTML = document.getElementById('term-field').value
+		// sharayete akhz
+		// cell4.innerHTML = document.getElementById('desc-field').value
 	}
 	</script>
+
+	<script type="text/javascript">
+	function deleteRow() {
+		var tableRef = document.getElementById('courses-table')
+		tableRef.deleteRow(tableRef.rows.length-1);
+	}
+	</script>
+
 
 </body>
 </html>

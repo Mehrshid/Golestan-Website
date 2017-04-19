@@ -107,16 +107,16 @@ section {
 	color: #004A80;
 }
 
-#btn-modal-left {
-	background-color: gray;
-	float: left;
-	color: white;
-}
-
 #btn-modal-right {
-	background-color: #004A80;
+	background-color: #005B2E;
 	color: white;
 	float: right;
+}
+
+#btn-modal-center {
+	background-color: #AE1916;
+	color: white;
+	float: left;
 }
 
 #par {
