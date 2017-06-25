@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link id="css" rel="stylesheet" href="../css/main.css">
+    <!-- endbuild -->
+    <meta charset="UTF-8">
+    <title> سیستم جامع گلستان </title>
+   <!--  <link rel="stylesheet" type="text/css" href="css/enroll.css">
+    <link rel="stylesheet" type="text/css" href="css/info.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/managecourses.css"> -->
+    <!--  <link rel="stylesheet" type="text/css" href="css/newterm.css">
+     <link rel="stylesheet" type="text/css" href="css/report.css">
+     <link rel="stylesheet" type="text/css" href="css/role.css">
+     <link rel="stylesheet" type="text/css" href="css/student.css">
+     <link rel="stylesheet" type="text/css" href="css/viewstudentlist.css"> -->
+<!--    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/actions.js"></script>
+    <script type="text/javascript" src="../js/managecourse.js"></script>
+    <script type="text/javascript" src="../js/managecoursetable.js"</script> -->
+
+    <!-- clock on the top of the page -->
+    <script>
+      function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('clk').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+    </script>
+
+    <script type="text/javascript">
+      var showdate = "yes"        // SHOW THE DATE | yes | no |
+        if (showdate == "yes") {
+      document.write('<div id="date-location">');
+      var d=new Date();
+      var weekday=new Array('یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنچ‌شنبه','جمعه','شنبه');
+      var monthname=new Array('ژانویه','فوریه','مارس','آوریل','می','ژوئن','ژوئیه','آگوست','سپتامبر','اکتبر','نوامبر','دسامبر');
+      document.write('<span class="date-font">' + weekday[d.getDay()] + ' ');
+      document.write(d.getDate());
+      document.write('<br>');
+      document.write(monthname[d.getMonth()] + ' ');
+      document.write(d.getFullYear())
+      document.write('<br></span>')
+      document.write('</div>');
+    }
+    </script>
+  </head>
+  <body ng-app="golestanApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <section id = "header">   
+      <div id = "logo-div">
+        <img id = "logo" src = "images/logo.png" alt = "Logo" style = "width:118px;height:120px;"> 
+      </div>
+      <div id = "title">
+        <h1 id = "golname">سیستم جامع دانشگاهی گلستان</h1>
+        <h1 id = "golname">دانشگاه شهید بهشتی</h1>
+      </div>
+      <div id = "info" style="float:right">
+      <p>خوش آمدید</p>
+      <a href="#!/login" >خروج</a>
+    </div>
+      
+    </section>
+    
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+
+    
+    <section id="footer">
+      <p>.سیستم جامع دانشگاهی گلستان | نسخه ۱.۰ | تمامی حقوق برای توسعه‌دهندگان محفوظ است</p>
+    </section>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/services/auth.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/student.js"></script>
+        <script src="scripts/controllers/professor.js"></script>
+        <script src="scripts/controllers/managecourses.js"></script>
+        <script src="scripts/services/style.js"></script>
+        <script src="scripts/controllers/editinfo.js"></script>
+        <script src="scripts/controllers/enroll.js"></script>
+        <script src="scripts/controllers/headprofessor.js"></script>
+        <script src="scripts/controllers/newterm.js"></script>
+        <script src="scripts/controllers/report.js"></script>
+        <script src="scripts/controllers/submitgrade.js"></script>
+        <script src="scripts/controllers/viewstudentlist.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

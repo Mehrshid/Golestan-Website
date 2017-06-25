@@ -1,0 +1,22 @@
+
+		<span ng-bind = "result"></span>
+		<form>
+			<section>
+				<div id = "login-div">
+					<h1 id = "login-title"> اطلاعات کاربری </h1>			
+					<input type = "text" placeholder = "شماره دانشجویی" ng-model="username" required>
+
+					<input type = "password" placeholder = "رمز عبور" ng-model="password" required>
+
+					<button type = "submit" ng-click="doLogin()">ورود</button> 
+
+					<div id = "remember-div"> 
+					<input type = "checkbox" checked = "checked"> مرا به خاطر بسپار <br/> <br/><br/>
+					</div>
+
+					<div id = "forgotpass-div"> <span class ="psw"> رمز خود را <a href = "#"> فراموش کرده‌ام</a></span>
+					</div>
+				</div>
+			</section>
+		</form>
+
